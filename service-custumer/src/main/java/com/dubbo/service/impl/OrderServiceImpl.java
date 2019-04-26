@@ -21,7 +21,7 @@ import com.dubbo.service.UserService;
 @Service//spring的service注解.加入ioc容器
 public class OrderServiceImpl implements OrderService {
 	@Autowired
-	UserService userService;//暂时先拷贝过来
+	UserService userService;//使用userservice服务
 
 	public List<UserAddress> initOrder(String id) {
 		System.out.println("用户id:"+id);

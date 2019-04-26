@@ -24,9 +24,18 @@ public class UserServiceImpl implements UserService {
 	 * @see com.dubbo.service.UserService#gets(java.lang.String)
 	 */
 	public List<UserAddress> gets(String id) {
+		
+		System.out.println("UserServiceImpl....1.....");
 		//模拟数据
 		UserAddress userAddress1= new UserAddress("1","北京");
 		UserAddress userAddress2= new UserAddress("2","上海");
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		return Arrays.asList(userAddress1,userAddress2);
 	}
 
